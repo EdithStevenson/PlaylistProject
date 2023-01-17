@@ -7,27 +7,14 @@
  */
 public class PlaylistTester
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class PlaylistTester
-     */
-    public PlaylistTester()
+    public static void main(String[] args)
     {
-        // initialise instance variables
-        x = 0;
-    }
-
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+        Song song1 = new Song("the 1", "Taylor Swift", "3:30"); 
+        System.out.println(song1.getName()); 
+        System.out.println(song1.getArtist()); 
+        System.out.println(song1.getDuration()); 
+        System.out.println(song1.getStatus()); 
+        song1.setStatus();  
+        System.out.println(song1.getStatus());
     }
 }
