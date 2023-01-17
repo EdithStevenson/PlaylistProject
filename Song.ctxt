@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=Song
+comment0.text=\n\ The\ Song\ Object\ inclues\ its\ name,\ artist,\ duration,\ and\ like-status\n\n\ @author\ Edith\ and\ Grace\n\ @version\ Jan\ 16,\ 2022\n
+comment1.params=name\ artist\ duration
+comment1.target=Song(java.lang.String,\ java.lang.String,\ java.lang.String)
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ Song\n
+comment2.params=
+comment2.target=java.lang.String\ getName()
+comment2.text=\n\ Gets\ name\ of\ Song\n\n\ @return\ the\ name\n
+comment3.params=
+comment3.target=java.lang.String\ getArtist()
+comment3.text=\n\ Gets\ artist\ of\ Song\n\n\ @return\ the\ artist\ of\ the\ song\n
+comment4.params=
+comment4.target=java.lang.String\ getDuration()
+comment4.text=\n\ Gets\ duration\ of\ Song\n\n\ @return\ the\ duration\ of\ the\ song\n
+comment5.params=
+comment5.target=java.lang.String\ getStatus()
+comment5.text=\n\ Gets\ like-status\ of\ Song\n\n\ @return\ the\ like-status\ of\ the\ song\n
+comment6.params=
+comment6.target=void\ setStatus()
+comment6.text=\n\ Sets\ like-status\ of\ Song\ to\ opposite\ of\ what\ it\ currently\ is\n\n
+numComments=7
