@@ -5,10 +5,12 @@
  * @author (your name)
  * @version (a version number or a date)
  */
+
+import java.util.ArrayList; 
 public class Playlist
 {
     // instance variables - replace the example below with your own
-    private int x;
+    ArrayList<Song> playlist;  
 
     /**
      * Constructor for objects of class Playlist
@@ -16,18 +18,56 @@ public class Playlist
     public Playlist()
     {
         // initialise instance variables
-        x = 0;
+        playlist = new ArrayList<Song>(); 
+  
     }
-
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
+     public void addSong(Song song)
     {
-        // put your code here
-        return x + y;
+        playlist.add(song); 
+        
+    }
+    public void removeSong(Song song)
+    {
+        playlist.remove(song); 
+    }
+    public void likeSong()
+    {
+       
+    }
+    public String examineAllSongs()
+    {
+        String allSongs = ""; 
+        for (int i = 0; i < playlist.size() -1; i++)
+        {
+            allSongs += playlist.get(i); 
+        }
+        return allSongs; 
+    }
+    public String examineLikedSongs()
+    {
+        String likedSongs = ""; 
+        for (int i = 0; i < playlist.size() - 1; i++)
+        {
+            if (playlist.get(i).setStatus() == true)
+            {
+               likedSongs += playlist.get(i); 
+            }
+        }
+        return likedSongs; 
+    }
+    public void totalDuration()
+    {
+        
+    }
+    public void removeUnliked()
+    {
+        for (int i = 0; i < playlist.size() - 1; i++)
+        {
+            if(playlist.get(i).setStatus() == false)
+            {
+                playlist.remove(i); 
+                i--; 
+            }
+        }
     }
 }

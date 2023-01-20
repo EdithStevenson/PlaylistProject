@@ -20,7 +20,7 @@ public class Song
     {
         this.name = name;
         this.artist = artist;
-        this.duration = duration;
+        this.duration = duration; 
         like = false; //songs will start out not liked
     }
 
@@ -71,11 +71,12 @@ public class Song
      * Sets like-status of Song to opposite of what it currently is
      *
      */
-    public void setStatus()
+    public boolean setStatus()
     {
         if (like)
             like = false;
         else
             like = true;
     }
+    
 }

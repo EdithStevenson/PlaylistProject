@@ -18,5 +18,8 @@ public class PlaylistTester
         System.out.println(song1.getStatus()); 
         song1.setStatus();  
         System.out.println(song1.getStatus());
+        
+        songs.addSong(new Song("invisable string", "Taylor Swift", 4:13,true);
+        
     }
 }
