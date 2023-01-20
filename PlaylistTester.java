@@ -43,6 +43,38 @@ public class PlaylistTester
         System.out.println(graceandedithrecs.formatListofSongs());
         System.out.println("");
         
-        System.out.println("Liking ");
+        System.out.println("Liking Songs 1 and 4");
+        graceandedithrecs.likeSong("invisible string");
+        graceandedithrecs.likeSong("Kill Bill");
+        System.out.println("");
+        System.out.println("Printing Playlist...");
+        System.out.println("");
+        System.out.println(graceandedithrecs.formatListofSongs());
+        System.out.println("");
+        
+        System.out.println("Removing Song 3");
+        graceandedithrecs.removeSong("Flowers");
+        System.out.println("");
+        System.out.println("Printing Playlist...");
+        System.out.println("");
+        System.out.println(graceandedithrecs.formatListofSongs());
+        System.out.println("");
+        
+        System.out.println("Printing Playlist of Just Liked Songs");
+        System.out.println("");
+        System.out.println(graceandedithrecs.examineLikedSongs());
+        System.out.println("");
+        
+        System.out.println("Printing Total Duration of Songs");
+        System.out.println(graceandedithrecs.getTotalDuration());
+        System.out.println("");
+        
+        System.out.println("Removing all unliked songs (with one method)");
+        graceandedithrecs.removeUnliked();
+        System.out.println("");
+        
+        System.out.println("Printing Playlist...");
+        System.out.println("");
+        System.out.println(graceandedithrecs.formatListofSongs());
     }
 }

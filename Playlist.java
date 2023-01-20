@@ -41,7 +41,7 @@ public class Playlist
     {
         for (int i = 0; i < playlist.size(); i++)
         {
-            if (playlist.get(i).equals(name))
+            if (playlist.get(i).getName().equals(name))
             {
                 playlist.remove(i);
             }
@@ -57,7 +57,7 @@ public class Playlist
     {
        for (int i = 0; i < playlist.size(); i++)
         {
-            if (playlist.get(i).equals(name))
+            if (playlist.get(i).getName().equals(name))
             {
                 playlist.get(i).setStatus();
             }
@@ -104,6 +104,11 @@ public class Playlist
         return total;
     }
     
+    /**
+     * creates printable display of liked songs
+     * 
+     * @return a String of liked songs with formatting
+     */
     public String examineLikedSongs()
     {
         String likedSongs = ""; 
@@ -111,12 +116,22 @@ public class Playlist
         {
             if (playlist.get(i).getStatus() == true)
             {
-               likedSongs += playlist.get(i); 
+                likedSongs += playlist.get(i).getName(); 
+                likedSongs += " by ";
+                likedSongs += playlist.get(i).getArtist(); 
+                likedSongs += " (";
+                likedSongs += playlist.get(i).getDuration(); //replace with convert
+                likedSongs += ") -- liked";
+                likedSongs += "\n";
             }
         }
         return likedSongs; 
     }
     
+    /**
+     * removes unliked songs from the Playlist
+     * 
+     */
     public void removeUnliked()
     {
         for (int i = 0; i < playlist.size(); i++)
