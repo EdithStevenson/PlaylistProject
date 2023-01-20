@@ -10,13 +10,13 @@ public class Song
     // instance variables
     private String name;
     private String artist;
-    private String duration;
+    private int duration;
     private boolean like;
 
     /**
      * Constructor for objects of class Song
      */
-    public Song(String name, String artist, String duration)
+    public Song(String name, String artist, int duration)
     {
         this.name = name;
         this.artist = artist;
@@ -49,7 +49,7 @@ public class Song
      *
      * @return the duration of the song
      */
-    public String getDuration()
+    public int getDuration()
     {
         return duration;
     }
@@ -59,19 +59,19 @@ public class Song
      *
      * @return the like-status of the song
      */
-    public String getStatus()
+    public boolean getStatus()
     {
         if (like)
-            return " -- liked";
+            return true;
         else
-            return "";
+            return false;
     }
     
     /**
      * Sets like-status of Song to opposite of what it currently is
      *
      */
-    public boolean setStatus()
+    public void setStatus()
     {
         if (like)
             like = false;
