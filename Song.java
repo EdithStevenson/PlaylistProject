@@ -55,6 +55,18 @@ public class Song
     }
     
     /**
+     * Converts duration of Song to a string value
+     *
+     * @return the duration of the song
+     */
+    public String convertDuration()
+    {
+        String stringDuration = "";
+        
+        return stringDuration;
+    }
+    
+    /**
      * Gets like-status of Song
      *
      * @return the like-status of the song

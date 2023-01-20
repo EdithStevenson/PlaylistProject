@@ -11,21 +11,38 @@ public class PlaylistTester
 {
     public static void main(String[] args)
     {
-        //to test the song object
-        Song song1 = new Song("the 1", "Taylor Swift", "3:30"); 
+        //to test the song object - delete before turning in
+        Song song1 = new Song("the 1", "Taylor Swift", 210); 
         System.out.println(song1.getName()); 
         System.out.println(song1.getArtist()); 
         System.out.println(song1.getDuration()); 
         System.out.println(song1.getStatus()); 
         song1.setStatus();  
         System.out.println(song1.getStatus());
-        // testing the playlist array
+        
+        // testing the playlist array - keep!
+        System.out.println("Initializing a Playlist...");
         Playlist graceandedithrecs = new Playlist();
-        graceandedithrecs.addSong("invisible string", "Taylor Swift", "4:13");
-        graceandedithrecs.addSong("Flowers", "Miley Cyrus", "3:22");
-        graceandedithrecs.addSong("marjorie", "Taylor Swift", "4:18");
-        graceandedithrecs.addSong("Kill Bill", "SZA", "2:38");
+        System.out.println("");
         
+        System.out.println("Adding Songs to Playlist...");
+        System.out.println("");
         
+        graceandedithrecs.addSong("invisible string", "Taylor Swift", 253);
+        System.out.println("Added 'invisible string' by Taylor Swift (4:13)");
+        graceandedithrecs.addSong("Flowers", "Miley Cyrus", 202);
+        System.out.println("Added 'Flowers' by Miley Cyrus (3:12)");
+        graceandedithrecs.addSong("marjorie", "Taylor Swift", 258);
+        System.out.println("Added 'marjorie' by Taylor Swift (4:18)");
+        graceandedithrecs.addSong("Kill Bill", "SZA", 158);
+        System.out.println("Added 'Kill Bill' by SZA (2:38)");
+        System.out.println("");
+        
+        System.out.println("Printing Playlist...");
+        System.out.println("");
+        System.out.println(graceandedithrecs.formatListofSongs());
+        System.out.println("");
+        
+        System.out.println("Liking ");
     }
 }

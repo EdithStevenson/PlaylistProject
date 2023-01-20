@@ -64,12 +64,27 @@ public class Playlist
         }
     }
     
-    public String examineAllSongs()
+    /**
+     * Completes and Formats the playlist (ready to be printed)
+     * 
+     * @returns a String that displays the playlist
+     */
+    public String formatListofSongs()
     {
         String allSongs = ""; 
         for (int i = 0; i < playlist.size(); i++)
         {
-            allSongs += playlist.get(i); 
+            allSongs += playlist.get(i).getName(); 
+            allSongs += " by ";
+            allSongs += playlist.get(i).getArtist(); 
+            allSongs += " (";
+            allSongs += playlist.get(i).getDuration(); //replace with convert
+            allSongs += ")";
+            if (playlist.get(i).getStatus())
+            {
+                allSongs += " -- liked";
+            }
+            allSongs += "\n";
         }
         return allSongs; 
     }
@@ -79,13 +94,14 @@ public class Playlist
      * 
      * @return total playing time
      */
-    public void getTotalDuration()
+    public int getTotalDuration()
     {
         int total = 0;
         for (int i = 0; i < playlist.size(); i++)
         {
              total += playlist.get(i).getDuration();
         }
+        return total;
     }
     
     public String examineLikedSongs()
