@@ -11,16 +11,7 @@ public class PlaylistTester
 {
     public static void main(String[] args)
     {
-        //to test the song object - delete before turning in
-        Song song1 = new Song("the 1", "Taylor Swift", 210); 
-        System.out.println(song1.getName()); 
-        System.out.println(song1.getArtist()); 
-        System.out.println(song1.getDuration()); 
-        System.out.println(song1.getStatus()); 
-        song1.setStatus();  
-        System.out.println(song1.getStatus());
-        
-        // testing the playlist array - keep!
+        // testing the playlist array
         System.out.println("Initializing a Playlist...");
         Playlist graceandedithrecs = new Playlist();
         System.out.println("");
@@ -31,7 +22,7 @@ public class PlaylistTester
         graceandedithrecs.addSong("invisible string", "Taylor Swift", 253);
         System.out.println("Added 'invisible string' by Taylor Swift (4:13)");
         graceandedithrecs.addSong("Flowers", "Miley Cyrus", 202);
-        System.out.println("Added 'Flowers' by Miley Cyrus (3:12)");
+        System.out.println("Added 'Flowers' by Miley Cyrus (3:22)");
         graceandedithrecs.addSong("marjorie", "Taylor Swift", 258);
         System.out.println("Added 'marjorie' by Taylor Swift (4:18)");
         graceandedithrecs.addSong("Kill Bill", "SZA", 158);

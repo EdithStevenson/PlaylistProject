@@ -78,7 +78,7 @@ public class Playlist
             allSongs += " by ";
             allSongs += playlist.get(i).getArtist(); 
             allSongs += " (";
-            allSongs += playlist.get(i).getDuration(); //replace with convert
+            allSongs += playlist.get(i).convertDuration();
             allSongs += ")";
             if (playlist.get(i).getStatus())
             {
@@ -94,14 +94,25 @@ public class Playlist
      * 
      * @return total playing time
      */
-    public int getTotalDuration()
+    public String getTotalDuration()
     {
         int total = 0;
         for (int i = 0; i < playlist.size(); i++)
         {
              total += playlist.get(i).getDuration();
         }
-        return total;
+        String stringDuration = "";
+        int minutes = 0;
+        int sec = 0;
+        minutes = total/60;
+        sec = total%60;
+        stringDuration = String.valueOf(minutes);
+        stringDuration += ":";
+        if (sec < 10)
+            stringDuration += "0" + String.valueOf(sec);
+        else 
+            stringDuration += String.valueOf(sec);
+        return stringDuration;
     }
     
     /**
@@ -120,7 +131,7 @@ public class Playlist
                 likedSongs += " by ";
                 likedSongs += playlist.get(i).getArtist(); 
                 likedSongs += " (";
-                likedSongs += playlist.get(i).getDuration(); //replace with convert
+                likedSongs += playlist.get(i).convertDuration(); 
                 likedSongs += ") -- liked";
                 likedSongs += "\n";
             }

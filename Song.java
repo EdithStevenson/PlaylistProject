@@ -62,7 +62,16 @@ public class Song
     public String convertDuration()
     {
         String stringDuration = "";
-        
+        int minutes = 0;
+        int sec = 0;
+        minutes = duration/60;
+        sec = duration%60;
+        stringDuration = String.valueOf(minutes);
+        stringDuration += ":";
+        if (sec < 10)
+            stringDuration += "0" + String.valueOf(sec);
+        else 
+            stringDuration += String.valueOf(sec);
         return stringDuration;
     }
     
