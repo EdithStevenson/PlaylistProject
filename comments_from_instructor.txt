@@ -1,0 +1,21 @@
+
+/*
+
+COMMENTS FROM THE INSTRUCTOR:
+
+Such nice work on this project, and your PlaylistTester.java works
+perfectly! Congratulations!
+
+Your .gitignore file wasn't ignoring the .ctxt and .class files, so
+I updated that file and you shouldn't be bothered by testing in
+the future.
+
+I've done a couple of commits on this project, including one in which
+this comment file has been added.
+
+Great work on this project you two!
+
+SCORE: 20/20
+
+*/
+
